@@ -12,6 +12,8 @@ M.disabled = {
     ["<A-l>"] = "",
     ["<A-j>"] = "",
     ["<A-k>"] = "",
+    ["<C-n>"] = "",
+    ["<Leader>e"] = "",
   },
 }
 
@@ -37,6 +39,13 @@ M.nvterm = {
 M.general = {
   n = {
     ["<Esc>"] = { ":noh <CR> : <Esc>", "Clear highlights" },
+  },
+}
+
+M.nvimtree = {
+  plugin = true,
+  n = {
+    ["<Leader>e"] = { "<cmd> NvimTreeToggle <CR>", "Toggle nvimtree" },
   },
 }
 

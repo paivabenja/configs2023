@@ -3,7 +3,57 @@ local overrides = require "custom.configs.overrides"
 ---@type NvPluginSpec[]
 local plugins = {
   -- Override plugin definition options
+  {
+    "smoka7/hop.nvim",
+    keys = {
+      {
+        ",",
+        function()
+          require("hop").hint_words()
+        end,
+        mode = { "n", "x", "o" },
+      },
+      {
+        "S",
+        function()
+          require("hop").hint_char2()
+        end,
 
+        mode = { "n", "x", "o" },
+      },
+      {
+        "t",
+        function()
+          require("hop").hint_char1 {
+            direction = require("hop.hint").HintDirection.AFTER_CURSOR,
+            current_line_only = true,
+          }
+        end,
+        mode = { "n", "x", "o" },
+      },
+      {
+        "T",
+        function()
+          require("hop").hint_char1 {
+            direction = require("hop.hint").HintDirection.BEFORE_CURSOR,
+            current_line_only = true,
+          }
+        end,
+        mode = { "n", "x", "o" },
+      },
+    },
+
+    opts = {
+
+      multi_windows = true,
+
+      keys = "htnsueoaidgcrlypmbkjvx",
+
+      uppercase_labels = true,
+
+      -- reverse_distribution = true,
+    },
+  },
   {
     "neovim/nvim-lspconfig",
     dependencies = {
@@ -65,6 +115,10 @@ local plugins = {
     "sainnhe/gruvbox-material",
   },
 
+  {
+    "mg979/vim-visual-multi",
+    lazy = false,
+  },
   -- To make a plugin not be loaded
   -- {
   --   "NvChad/nvim-colorizer.lua",

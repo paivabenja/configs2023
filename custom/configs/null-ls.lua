@@ -17,7 +17,10 @@ local sources = {
   b.formatting.stylua,
 
   -- cpp
-  b.formatting.clang_format,
+  -- b.formatting.clang_format,
+
+  -- java
+  b.formatting.google_java_format,
 }
 
 null_ls.setup {

@@ -13,6 +13,7 @@ M.treesitter = {
     "python",
     "markdown",
     "markdown_inline",
+    "java",
   },
   indent = {
     enable = true,
@@ -38,11 +39,15 @@ M.mason = {
     "tailwindcss-language-server",
 
     -- c/cpp stuff
-    "clangd",
-    "clang-format",
+    -- "clangd",
+    -- "clang-format",
 
     -- python
-    "pyright"
+    "pyright",
+
+    -- java
+    "jdtls",
+    "google-java-format",
   },
 }
 
