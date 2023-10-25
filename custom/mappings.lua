@@ -14,6 +14,7 @@ M.disabled = {
     ["<A-k>"] = "",
     ["<C-n>"] = "",
     ["<Leader>e"] = "",
+    ["<leader>e"] = "",
   },
 }
 
@@ -46,9 +47,8 @@ M.nvimtree = {
   plugin = true,
   n = {
     ["<Leader>e"] = { "<cmd> NvimTreeToggle <CR>", "Toggle nvimtree" },
+    ["<leader>e"] = { "<cmd> NvimTreeToggle <CR>", "Toggle nvimtree" },
   },
 }
-
--- more keybinds!
 
 return M
