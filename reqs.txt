@@ -1,0 +1,4 @@
+kitty
+tmux
+zsh
+starship
